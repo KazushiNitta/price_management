@@ -12,8 +12,8 @@ class ExpenseController extends Controller
 {
     public function index()
     {
-        $total_income = Income::total();
-        $total_expense = Expense::total();
+        $total_income = Income::sum('price');
+        $total_expense = Expense::sum('price');
         $expenses = Expense::orderBy('date', 'asc')->get();
 
         return view('expenses.index')

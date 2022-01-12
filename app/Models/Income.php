@@ -15,9 +15,4 @@ class Income extends Model
         'text',
         'price',
     ];
-
-    public static function total()
-    {
-        return self::sum('price');
-    }
 }

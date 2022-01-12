@@ -9,14 +9,21 @@ use App\Http\Requests\InputRequest;
 
 class IncomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $total_income = Income::total();
-        $total_expense = Expense::total();
-        $incomes = Income::orderBy('date', 'asc')->get();
+        $month = $request->month;
+        if (!empty($month)) {
+            $total_income = Income::where('date', 'LIKE', "{$month}%")->sum('price');
+            $total_expense = Expense::where('date', 'LIKE', "{$month}%")->sum('price');
+            $incomes = Income::where('date', 'LIKE', "{$month}%")->orderBy('date', 'asc')->get();
+        } else {
+            $total_income = Income::sum('price');
+            $total_expense = Expense::sum('price');
+            $incomes = Income::orderBy('date', 'asc')->get();
+        }
 
         return view('incomes.index')
-            ->with(['total_income' => $total_income, 'total_expense' => $total_expense, 'incomes' => $incomes]);
+            ->with(['month'=> $month, 'total_income' => $total_income, 'total_expense' => $total_expense, 'incomes' => $incomes]);
     }
 
     public function create()

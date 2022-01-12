@@ -20,6 +20,13 @@
     </section>
 
     <section>
+        <form action="{{ route('incomes.index') }}" method="GET">
+            <input type="month" name="month" value="{{ $month }}">
+            <button>絞り込み</button>
+        </form>
+    </section>
+
+    <section>
         <table>
             <tr>
                 <th>収入</th>
