@@ -10,14 +10,21 @@ use Symfony\Component\Console\Input\Input;
 
 class ExpenseController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $total_income = Income::sum('price');
-        $total_expense = Expense::sum('price');
-        $expenses = Expense::orderBy('date', 'asc')->get();
+        $month = $request->month;
+        if (!empty($month)) {
+            $total_income = Income::where('date', 'LIKE', "{$month}%")->sum('price');
+            $total_expense = Expense::where('date', 'LIKE', "{$month}%")->sum('price');
+            $expenses = Expense::where('date', 'LIKE', "{$month}%")->orderBy('date', 'asc')->get();
+        } else {
+            $total_income = Income::sum('price');
+            $total_expense = Expense::sum('price');
+            $expenses = Expense::orderBy('date', 'asc')->get();
+        }
 
         return view('expenses.index')
-        ->with(['total_income' => $total_income, 'total_expense' => $total_expense, 'expenses' => $expenses]);
+        ->with(['month' => $month, 'total_income' => $total_income, 'total_expense' => $total_expense, 'expenses' => $expenses]);
     }
 
     public function create()

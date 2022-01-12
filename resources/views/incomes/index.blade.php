@@ -8,7 +8,7 @@
         <a href="{{ route('expenses.create') }}">支出を登録する</a>
     </section>
 
-    <section>
+    {{-- <section>
         <ul class="list-menu">
             <li>
                 <a href="{{ route('incomes.index') }}">収入の詳細を確認する</a>
@@ -17,7 +17,7 @@
                 <a href="{{ route('expenses.index') }}">支出の詳細を確認する</a>
             </li>
         </ul>
-    </section>
+    </section> --}}
 
     <section>
         <form action="{{ route('incomes.index') }}" method="GET">
@@ -36,18 +36,29 @@
                 <th>収支</th>
             </tr>
             <tr>
-                <td>{{ $total_income }}</td>
+                <td>¥{{ $total_income }}</td>
                 <td>-</td>
-                <td>{{ $total_expense }}</td>
+                <td>¥{{ $total_expense }}</td>
                 <td>=</td>
-                <td>{{ $total_income - $total_expense }}</td>
+                <td>¥{{ $total_income - $total_expense }}</td>
             </tr>
         </table>
     </section>
 
     <section>
-        <h2>収入一覧</h2>
-        <table>
+        <ul class="list-menu">
+            <li>
+                <a href="{{ route('incomes.index') }}">収入</a>
+            </li>
+            <li>
+                <a href="{{ route('expenses.index') }}">支出</a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        {{-- <h2>収入一覧</h2> --}}
+        <table border="1">
             @if (count($incomes) > 0)
                 <tr>
                     <th>日付</th>
@@ -60,7 +71,7 @@
                         <td>{{ $income->date }}</td>
                         <td>{{ $income->account }}</td>
                         <td>{!! nl2br(e($income->text)) !!}</td>
-                        <td>{{ $income->price }}</td>
+                        <td>¥{{ $income->price }}</td>
                         <td><a href="{{ route('incomes.edit', $income) }}">編集</a></td>
                         <td>
                             <form action="{{ route('incomes.destroy', $income) }}" method="POST">
