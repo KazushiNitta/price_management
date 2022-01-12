@@ -11,3 +11,7 @@ h1 {
     color: red;
     list-style: none;
 }
+
+table {
+    border-collapse: collapse;
+}
