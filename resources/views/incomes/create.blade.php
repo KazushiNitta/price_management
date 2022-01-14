@@ -3,8 +3,8 @@
         収入登録
     </x-slot>
 
-    <h2>収入登録</h2>
-    <section>
+    <h2 class="sub-title income">収入登録</h2>
+    <section class="form">
         <form action="{{ route('incomes.store') }}" method="POST">
             @csrf
 
@@ -14,27 +14,27 @@
                 @endforeach
             </ul>
 
-            <div>
-                <label for="date">日付</label>
-                <input type="date" name="date" id="date" value="{{ old('date') }}">
+            <div class="part">
+                <label for="date" class="label">日付</label>
+                <input type="date" name="date" id="date" value="{{ old('date') }}" class="input">
             </div>
 
-            <div>
-                <label for="account">科目</label>
-                <input type="text" name="account" id="account" value="{{ old('account') }}">
+            <div class="part">
+                <label for="account" class="label">科目</label>
+                <input type="text" name="account" id="account" value="{{ old('account') }}" class="input">
             </div>
 
-            <div>
-                <label for="text">摘要</label>
-                <textarea name="text" id="text">{{ old('text') }}</textarea>
+            <div class="part">
+                <label for="text" class="label">摘要</label>
+                <textarea name="text" id="text" class="text">{{ old('text') }}</textarea>
             </div>
 
-            <div>
-                <label for="price">金額</label>
-                <input type="number" name="price" id="price" value="{{ old('price') }}">
+            <div class="part">
+                <label for="price" class="label">金額</label>
+                <input type="number" name="price" id="price" value="{{ old('price') }}" class="input">
             </div>
-            <button>登録</button>
+            <button class="income">登録</button>
         </form>
+        <a href="{{ route('incomes.index') }}">戻る</a>
     </section>
-    <a href="{{ route('incomes.index') }}">戻る</a>
 </x-layout>

@@ -1,10 +1,184 @@
+/* 全体のスタイル */
+body {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(220, 220, 220);
+}
+
+header {
+    margin: 10px;
+}
+
 h1 {
     border-bottom: 1px solid;
+    margin: 0;
+    padding: 15px;
+}
+
+.container {
+    margin: 10px;
+}
+
+/* 一覧ページのスタイル */
+.register {
+    display: flex;
+    margin: 50px 0;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.register > a {
+    font-size: 18px;
+    padding: 5px 20px;
+    border-radius: 4px;
+    color: black;
+    text-decoration: none;
+}
+
+.register > .income {
+    background-color: rgb(100, 200, 255);
+}
+
+.register > .income:hover {
+    background-color: rgb(0, 140, 255);
+    transition: 0.4s;
+}
+
+.register > .expense {
+    background-color: rgb(255, 100, 100);
+}
+
+.register > .expense:hover {
+    background-color: red;
+    transition: 0.4s;
+}
+
+.search {
+    margin: 10px 0;
+}
+
+.search > form {
+    display: flex;
+    justify-content: center;
+}
+
+.search > form > input {
+    width: 280px;
+    height: 36px;
+    border-radius: 4px 0 0 4px;
+    border-width: thin;
+}
+
+.search > form > button {
+    height: 38px;
+    border-radius: 0 4px 4px 0;
+    border-width: thin;
+    cursor: pointer;
+}
+
+.sum {
+    margin: 10px 0;
+}
+
+.sum > table {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.sum > table td {
+    text-align: center;
 }
 
 .list-menu {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-menu a {
+    display: inline-block;
+    width: 150px;
+    height: 26px;
+    margin: 0;
+    margin-left: 1px;
+    padding: 1px;
+    text-align: center;
+}
+
+.list-menu .income-income {
+    background-color: rgb(100, 200, 255);
+}
+
+.list-menu .income-expense:hover {
+    background-color: rgb(255, 100, 100);
+}
+
+.list-menu .expense-income:hover {
+    background-color: rgb(100, 200, 255);
+}
+
+.list-menu .expense-expense {
+    background-color: rgb(255, 100, 100);
+}
+
+.content {
+    margin: 0;
+}
+
+.content > table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+.content > table .income {
+    background-color: rgb(100, 200, 255);
+}
+
+.content > table .expense {
+    background-color: rgb(255, 100, 100);
+}
+
+.content > .income_table tr:nth-child(odd) td {
+    background-color: rgba(100, 200, 255, 0.4);
+}
+
+.content > .expense_table tr:nth-child(odd) td {
+    background-color: rgba(255, 100, 100, 0.4);
+}
+
+.content > table td {
+    text-align: center;
+}
+
+.content button {
+    cursor: pointer;
+}
+
+.content a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 登録、編集ページのスタイル */
+.sub-title {
+    text-align: center;
+}
+
+.container > .income {
+    color: rgb(0, 140, 255);
+}
+
+.container > .expense {
+    color: red;
+}
+
+.form {
+    margin: 0 28px;
+    padding: 0 15px;
 }
 
 .error {
@@ -12,6 +186,56 @@ h1 {
     list-style: none;
 }
 
-table {
-    border-collapse: collapse;
+.part {
+    margin-bottom: 24px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.text {
+    width: 100%;
+    height: 70px;
+    padding: 6px 12px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form button {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.form .income {
+    background-color: rgb(100, 200, 255);
+}
+
+.form .expense {
+    background-color: rgb(255, 100, 100);
+}
+
+.form .income:hover {
+    background-color: rgb(0, 140, 255);
+    transition: 0.4s;
+}
+
+.form .expense:hover {
+    background-color: red;
+    transition: 0.4s;
 }
