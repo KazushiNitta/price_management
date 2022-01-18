@@ -1,3 +1,13 @@
+# 家計簿アプリ
+日々の収入、支出を登録することで月ごとに収支を管理できるアプリです。
+
+## 機能一覧
+- 収入一覧の表示機能
+- 支出一覧の表示機能
+- 月単位の絞り込み機能
+- 収入の登録、編集、削除機能
+- 支出の登録、編集、削除機能
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
