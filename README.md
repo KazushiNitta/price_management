@@ -4,13 +4,18 @@
 ## 機能一覧
 - 収入、支出の一覧表示
 ![index](https://user-images.githubusercontent.com/84068204/149913452-1ce23b44-493d-4185-b2b3-5932b894610b.gif)
+
 - 収入、支出の登録
 ![create](https://user-images.githubusercontent.com/84068204/149915366-3e55f022-a962-4400-9395-4e9b77cdafcb.gif)
+
 - 収入、支出の編集
 ![update](https://user-images.githubusercontent.com/84068204/149920348-79eaa62e-86a3-4006-817b-30f4f9b2f3e6.gif)
+
 - 収入、支出の削除
 ![delete](https://user-images.githubusercontent.com/84068204/149920728-b466078e-9c2d-4a9b-b92c-ab53621d0197.gif)
+
 - 月単位の絞り込み機能
+![search](https://user-images.githubusercontent.com/84068204/149924164-4126b503-77cd-4f29-a2c2-8332fb651d33.gif)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
