@@ -7,6 +7,7 @@
 - 収入、支出の登録
 ![create](https://user-images.githubusercontent.com/84068204/149915366-3e55f022-a962-4400-9395-4e9b77cdafcb.gif)
 - 収入、支出の編集
+![update](https://user-images.githubusercontent.com/84068204/149920348-79eaa62e-86a3-4006-817b-30f4f9b2f3e6.gif)
 - 収入、支出の削除
 - 月単位の絞り込み機能
 
