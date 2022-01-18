@@ -3,6 +3,7 @@
 
 ## 機能一覧
 - 収入、支出の一覧表示
+![index](https://user-images.githubusercontent.com/84068204/149913452-1ce23b44-493d-4185-b2b3-5932b894610b.gif)
 - 収入、支出の登録
 - 収入、支出の編集
 - 収入、支出の削除
