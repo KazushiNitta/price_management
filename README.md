@@ -5,6 +5,7 @@
 - 収入、支出の一覧表示
 ![index](https://user-images.githubusercontent.com/84068204/149913452-1ce23b44-493d-4185-b2b3-5932b894610b.gif)
 - 収入、支出の登録
+![create](https://user-images.githubusercontent.com/84068204/149915366-3e55f022-a962-4400-9395-4e9b77cdafcb.gif)
 - 収入、支出の編集
 - 収入、支出の削除
 - 月単位の絞り込み機能
