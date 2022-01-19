@@ -17,6 +17,11 @@
 - 月単位の絞り込み機能
 ![search](https://user-images.githubusercontent.com/84068204/149924164-4126b503-77cd-4f29-a2c2-8332fb651d33.gif)
 
+## 使用技術
+- laravel
+- git github
+- docker
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
